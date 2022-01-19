@@ -1,7 +1,6 @@
 package cinema.config;
 
 import cinema.model.Role;
-import cinema.model.RoleEnum;
 import cinema.model.User;
 import cinema.service.RoleService;
 import cinema.service.UserService;
@@ -19,11 +18,11 @@ public class DataInitializer {
     @PostConstruct
     public void inject() {
         Role adminRole = new Role();
-        adminRole.setRoleName(RoleEnum.ADMIN);
+        adminRole.setName(Role.RoleName.ADMIN);
         roleService.add(adminRole);
 
         Role userRole = new Role();
-        userRole.setRoleName(RoleEnum.USER);
+        userRole.setName(Role.RoleName.USER);
         roleService.add(userRole);
 
         User admin = new User();
