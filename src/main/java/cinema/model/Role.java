@@ -19,5 +19,10 @@ public class Role {
     private Long id;
     @Enumerated(EnumType.STRING)
     @Column(name = "name")
-    private RoleEnum roleName;
+    private RoleName name;
+
+    public enum RoleName {
+        USER,
+        ADMIN;
+    }
 }
